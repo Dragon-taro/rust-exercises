@@ -8,11 +8,11 @@
 
 fn main() {
     let name = format!("dear rustaceans");
-    greet(name.clone());
-    greet(name);
+    greet(&name);
+    greet(&name[5..]);
 }
 
-fn greet(name: String) {
+fn greet(name: &str) {
     println!("Hello {}", name);
 }
 
